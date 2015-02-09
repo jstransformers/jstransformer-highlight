@@ -1,6 +1,6 @@
 {
   "name": "jstransformer-highlight",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Apply highlight.js to some code",
   "keywords": [
     "jstransformer"
