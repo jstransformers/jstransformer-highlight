@@ -1,0 +1,22 @@
+{
+  "name": "jstransformer-highlight",
+  "version": "0.0.0",
+  "description": "Apply highlight.js to some code",
+  "keywords": [
+    "jstransformer"
+  ],
+  "dependencies": {
+    "escape-html": "^1.0.1",
+    "highlight.js": "^8.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jstransformers/jstransformer-highlight.git"
+  },
+  "author": "ForbesLindesay",
+  "license": "MIT"
+}
