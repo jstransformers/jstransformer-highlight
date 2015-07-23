@@ -13,6 +13,13 @@
 
 ## API
 
+### Options
+
+ - `lang` - The language the code is in
+ - `auto` - defaults to `true` if `lang` is undefined.  Set this to `true` to have highlight.js auto-detect the language.  Set this to `false` to disable auto-detection even when there is no `lang` option.
+
+### Example
+
 ```js
 var highlight = require('jstransformer')(require('jstransformer-highlight'))
 
