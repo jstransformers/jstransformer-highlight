@@ -1,22 +1,31 @@
 {
   "name": "jstransformer-highlight",
-  "version": "1.0.0",
-  "description": "Apply highlight.js to some code",
+  "version": "1.0.1",
+  "description": "Highlight.js support for JSTransformers.",
+  "dependencies": {
+    "escape-html": "^1.0.1",
+    "highlight.js": "^8.6.0"
+  },
   "keywords": [
     "jstransformer"
   ],
-  "dependencies": {
-    "escape-html": "^1.0.1",
-    "highlight.js": "^8.4.0"
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "test-jstransformer": "^1.0.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "node test"
+    "test": "test-jstransformer",
+    "coverage": "test-jstransformer coverage"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jstransformers/jstransformer-highlight.git"
   },
-  "author": "ForbesLindesay",
+  "author": {
+    "name": "JSTransformers Team",
+    "url": "http://github.com/orgs/jstransformers/people"
+  },
   "license": "MIT"
 }
