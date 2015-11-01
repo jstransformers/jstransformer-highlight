@@ -4,7 +4,7 @@ var hljs = require('highlight.js');
 var escape = require('escape-html');
 
 exports.name = 'highlight.js';
-exports.inputFormats = ['highlight', 'highlightjs', 'highlight.js'];
+exports.inputFormats = ['code', 'highlight', 'highlightjs', 'highlight.js'];
 exports.outputFormat = 'html';
 
 exports.render = function (str, options) {
