@@ -1,7 +1,7 @@
 'use strict'
 
-var hljs = require('highlight.js')
-var escape = require('escape-html')
+const hljs = require('highlight.js')
+const escape = require('escape-html')
 
 exports.name = 'highlight.js'
 exports.inputFormats = ['code', 'highlight', 'highlightjs', 'highlight.js']
