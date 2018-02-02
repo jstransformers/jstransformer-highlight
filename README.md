@@ -1,7 +1,5 @@
 # jstransformer-highlight
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-highlight.svg)](https://greenkeeper.io/)
-
 [Highlight.js](http://highlightjs.org) support for [JSTransformers](http://github.com/jstransformers).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-highlight/master.svg)](https://travis-ci.org/jstransformers/jstransformer-highlight)
