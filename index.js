@@ -12,12 +12,18 @@ exports.render = function (str, options) {
   if (options.lang) {
     try {
       return hljs.highlight(options.lang, str).value
-    } catch (err) {}
+    } catch (error) { // eslint-disable-line no-unused-vars
+      // Do nothing.
+    }
   }
+
   if (options.auto || (options.auto !== false && !options.lang)) {
     try {
       return hljs.highlightAuto(str).value
-    } catch (err) {}
+    } catch (error) { // eslint-disable-line no-unused-vars
+      // Do nothing.
+    }
   }
+
   return escape(str)
 }
