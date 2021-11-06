@@ -25,7 +25,8 @@ exports.render = function (str, options) {
     return escape(str)
   }
 
-  const node = `<pre><code class="${languageClass}">${str}</code></pre>`
+  const html = options.escape === false ? str : escape(str)
+  const node = `<pre><code class="${languageClass}">${html}</code></pre>`
   const dom = new JSDOM(node)
   const document = dom.window.document
   global.document = document
