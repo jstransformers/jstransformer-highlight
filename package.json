@@ -4,7 +4,7 @@
   "description": "Highlight.js support for JSTransformers.",
   "dependencies": {
     "escape-html": "^1.0.1",
-    "highlight.js": "^9.0.0"
+    "highlight.js": "^11.5.1"
   },
   "keywords": [
     "jstransformer"
