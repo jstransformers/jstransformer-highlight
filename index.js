@@ -7,12 +7,17 @@ const jsdom = require('jsdom')
 const JSDOM = jsdom.JSDOM
 hljs.configure({hideUpgradeWarningAcceptNoSupportOrSecurityUpdates: true})
 
+const sanitize = str => str
+  .replace(/<udiv([ >])/gm, '<div$1')
+  .replace(/<\/udiv>/gm, '</div>')
+
 exports.name = 'highlight.js'
 exports.inputFormats = ['code', 'highlight', 'highlightjs', 'highlight.js']
 exports.outputFormat = 'html'
 
 exports.render = function (str, options) {
   options = options || {}
+  if (str) str = sanitize(str)
 
   const isLanguageSupported = Boolean(hljs.getLanguage(options.lang))
   const languageClass = (options.auto || !options.lang) ? '' : `language-${options.lang}`
