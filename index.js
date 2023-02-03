@@ -3,9 +3,15 @@
 const hljs = require('highlight.js')
 const escape = require('escape-html')
 const jsdom = require('jsdom')
+const mergeHTMLPlugin = require('./lib/mergeHTMLPlugin')
 
 const JSDOM = jsdom.JSDOM
-hljs.configure({hideUpgradeWarningAcceptNoSupportOrSecurityUpdates: true})
+hljs.configure({
+  hideUpgradeWarningAcceptNoSupportOrSecurityUpdates: true,
+  ignoreUnescapedHTML: true,
+  throwUnescapedHTML: false,
+})
+hljs.addPlugin(mergeHTMLPlugin)
 
 const sanitize = str => str
   .replace(/<udiv([ >])/gm, '<div$1')
@@ -37,7 +43,7 @@ exports.render = function (str, options) {
   global.document = document
 
   const el = document.querySelector('code')
-  hljs.highlightBlock(el)
+  hljs.highlightElement(el)
 
   return el.innerHTML
 }
